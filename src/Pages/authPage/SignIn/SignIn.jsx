@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import { CgFacebook } from "react-icons/cg";
+import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
@@ -12,36 +14,18 @@ const SignIn = () => {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen gap-8 max-w-7xl mx-auto border-2">
-            <div className="flex justify-center items-center p-10">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 justify-center items-center px-20 h-screen gap-8 max-w-7xl mx-auto">
+            <div className="lg:col-span-3 grid-cols-1 lg:flex justify-center items-center lg:px-20 md:px-6 md:flex hidden">
                 <img
                     src="/src/assets/login&SignUp/Frame.png"
                     alt="SignUp page Image"
-                    className="w-[80%]"
                 />
             </div>
-            <div className="p-16 border-2">
+            <div className="lg:col-span-2 col-span-1 p-16 shadow-lg shadow-[#D3373C33] rounded-xl grid grid-cols-1">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
                     <h3 className="text-center font-semibold text-[#444444] text-[40px] pb-4">
-                        Sign Up
+                        Login
                     </h3>
-                    <div className="space-y-2">
-                        <label className="text-base font-semibold text-[#444444]">
-                            Full Name
-                        </label>
-                        <input
-                            type="text"
-                            name="name"
-                            className="border border-[#E8E8E8] rounded-md p-2 w-full text-base text-[#444444] hover:border-[#D3373C] focus:border-[#D3373C] duration-300"
-                            placeholder="Type here"
-                            {...register("name", { required: true })}
-                        />
-                        {errors.name && (
-                            <span className="text-sm font-bold text-red-500">
-                                Name is required
-                            </span>
-                        )}
-                    </div>
                     <div className="space-y-2">
                         <label className="text-base font-semibold text-[#444444]">
                             Email
@@ -104,19 +88,46 @@ const SignIn = () => {
                         )}
                     </div>
                     <div className="w-full my-4">
-                        <button className="text-center px-7 pt-3 w-full pb-2 relative rounded-lg group font-bold overflow-hidden border-b-4 border-[#D1A054] text-white bg-[#D1A054] inline-block uppercase">
-                            <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-white group-hover:h-full"></span>
-                            <span className="relative group-hover:text-[#D1A054]">
-                                Sign Up
+                        <button className="relative w-full inline-flex items-center justify-start px-8 py-2 overflow-hidden font-semibold transition-all bg-[#D3373C] rounded-md group">
+                            <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                            </span>
+                            <span className="absolute -bottom-2 left-0 w-full h-full transition-all duration-100 ease-in-out delay-200 -translate-x-full translate-y-full bg-[#EF1D23] rounded-md group-hover:mb-12 group-hover:translate-x-0"></span>
+                            <span className="relative w-full text-center text-white transition-colors duration-100 ease-in-out group-hover:text-white">
+                                Login
                             </span>
                         </button>
                     </div>
-                    {/* new user */}
-                    <p className="text-[#D1A054] font-medium text-base text-center">
-                        <small>Already registered?</small>{" "}
-                        <Link to={"/login"}>Go to Log in</Link>
-                    </p>
                 </form>
+                {/* signIn Google and facebook */}
+                <div className="py-4 space-y-4">
+                    <p className="font-medium text-[18px] text-[#444444] text-center">
+                        Or Sign Up with
+                    </p>
+                    <div className="flex justify-center items-center gap-4">
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61566573161860"
+                            target="_blank"
+                            className="bg-[#F5F5F8] p-3 rounded-full text-[#3B5998] hover:bg-[#D3D3D3]  duration-300 transition-all"
+                        >
+                            <CgFacebook className="text-2xl" />
+                        </a>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61566573161860"
+                            target="_blank"
+                            className="bg-[#F5F5F8] p-3 rounded-full hover:bg-[#D3D3D3] duration-300 transition-all"
+                        >
+                            <FcGoogle className="text-2xl" />
+                        </a>
+                    </div>
+                </div>
+                {/* new user */}
+                <p className="text-[#737373] font-normal text-base text-center">
+                    <small>You have no account? Please</small>{" "}
+                    <Link className="text-[#D3373C] font-bold" to={"/signUp"}>
+                        Sign Up
+                    </Link>
+                </p>
             </div>
         </div>
     );

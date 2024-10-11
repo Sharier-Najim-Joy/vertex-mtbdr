@@ -73,7 +73,11 @@ const Navbar = () => {
 
     const navOptionsMd = (
         <>
-            <li className="font-extrabold text-base duration-300 capitalize">
+            <li
+                className={`font-extrabold text-base duration-50 capitalize animate__animated animate__bounceInUp animate__delay-0.1s ${
+                    isOpen ? "" : "hidden"
+                }`}
+            >
                 <NavLink
                     to={"/"}
                     className={({ isActive }) =>
@@ -83,7 +87,11 @@ const Navbar = () => {
                     Home
                 </NavLink>
             </li>
-            <li className="font-extrabold text-base duration-300 capitalize">
+            <li
+                className={`font-extrabold text-base duration-75 capitalize animate__animated animate__bounceInUp animate__delay-0.1s ${
+                    isOpen ? "" : "hidden"
+                }`}
+            >
                 <NavLink
                     to={"/about"}
                     className={({ isActive }) =>
@@ -93,7 +101,11 @@ const Navbar = () => {
                     About Us
                 </NavLink>
             </li>
-            <li className="font-extrabold text-base duration-300 capitalize">
+            <li
+                className={`font-extrabold text-base duration-100 capitalize animate__animated animate__bounceInUp animate__delay-0.3s ${
+                    isOpen ? "" : "hidden"
+                }`}
+            >
                 <NavLink
                     to={"/products"}
                     className={({ isActive }) =>
@@ -103,7 +115,11 @@ const Navbar = () => {
                     Products
                 </NavLink>
             </li>
-            <li className="font-extrabold text-base duration-300 capitalize">
+            <li
+                className={`font-extrabold text-base duration-200 capitalize animate__animated animate__bounceInUp animate__delay-0.5s ${
+                    isOpen ? "" : "hidden"
+                }`}
+            >
                 <NavLink
                     to={"/chemicals"}
                     className={({ isActive }) =>
@@ -113,7 +129,11 @@ const Navbar = () => {
                     Chemicals
                 </NavLink>
             </li>
-            <li className="font-extrabold text-base duration-300 capitalize">
+            <li
+                className={`font-extrabold text-base duration-300 capitalize animate__animated animate__bounceInUp animate__delay-0.7s ${
+                    isOpen ? "" : "hidden"
+                }`}
+            >
                 <NavLink
                     to={"/gallery"}
                     className={({ isActive }) =>
@@ -123,7 +143,11 @@ const Navbar = () => {
                     Gallery
                 </NavLink>
             </li>
-            <li className="font-extrabold text-base duration-300 capitalize">
+            <li
+                className={`font-extrabold text-base duration-400 capitalize animate__animated animate__bounceInUp animate__delay-0.9s ${
+                    isOpen ? "" : "hidden"
+                }`}
+            >
                 <NavLink
                     to={"/contact"}
                     className={({ isActive }) =>
