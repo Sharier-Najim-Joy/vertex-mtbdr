@@ -5,7 +5,7 @@ import "animate.css";
 const Root = () => {
     return (
         <div className="font-inter">
-            <header>
+            <header className="">
                 <Navbar />
             </header>
             <main className="max-w-7xl mx-auto">

@@ -161,8 +161,8 @@ const Navbar = () => {
     );
 
     return (
-        <div className="w-full max-w-7xl mx-auto z-30">
-            <div className="navbar flex justify-between items-center relative py-4">
+        <div className="w-full max-w-7xl mx-auto z-50">
+            <div className="navbar flex justify-between items-center relative py-5">
                 {/* NavLeft */}
                 <div className="relative">
                     <div className="dropdown">
