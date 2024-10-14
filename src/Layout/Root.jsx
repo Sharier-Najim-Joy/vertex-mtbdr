@@ -4,13 +4,16 @@ import Footer from "../Components/Shared/Footer";
 import "animate.css";
 const Root = () => {
     return (
-        <div className="font-inter lg:px-2 px-3">
-            <header className="">
-                <Navbar />
-            </header>
-            <main className="max-w-7xl mx-auto">
-                <Outlet />
-            </main>
+        <div className="font-inter">
+            <div className="lg:px-2 px-3">
+                <header className="">
+                    <Navbar />
+                </header>
+                <main className="max-w-7xl mx-auto">
+                    <Outlet />
+                </main>
+            </div>
+
             <footer>
                 <Footer />
             </footer>

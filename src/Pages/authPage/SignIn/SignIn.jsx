@@ -14,7 +14,7 @@ const SignIn = () => {
     };
 
     return (
-        <div className="grid lg:grid-cols-5 md:grid-cols-2 justify-center items-center px-20 h-screen gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 justify-center items-center lg:px-10 px-0 h-screen gap-5 max-w-7xl mx-auto">
             <div className="lg:col-span-3 grid-cols-1 lg:flex justify-center items-center lg:px-20 md:px-6 md:flex hidden">
                 <img
                     src="/src/assets/login&SignUp/Frame.png"

@@ -2,8 +2,12 @@ import { useForm } from "react-hook-form";
 import { CgFacebook } from "react-icons/cg";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import "./signUp.css";
+import { useState } from "react";
 
 const SignUp = () => {
+    const [show, setShow] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -14,14 +18,14 @@ const SignUp = () => {
     };
 
     return (
-        <div className="grid lg:grid-cols-5 md:grid-cols-2 justify-center items-center px-20 h-screen gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 justify-center items-center lg:px-10 px-0 h-screen gap-5 max-w-7xl mx-auto">
             <div className="lg:col-span-3 grid-cols-1 lg:flex justify-center items-center lg:px-20 md:px-6 md:flex hidden">
                 <img
                     src="/src/assets/login&SignUp/Frame.png"
                     alt="SignUp page Image"
                 />
             </div>
-            <div className="lg:col-span-2 col-span-1 p-16 shadow-lg shadow-[#D3373C33] rounded-xl grid grid-cols-1">
+            <div className="lg:col-span-2 col-span-1 lg:p-16 p-6 shadow-lg shadow-[#D3373C33] rounded-xl grid grid-cols-1">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
                     <h3 className="text-center font-semibold text-[#444444] text-[40px] pb-4">
                         Sign Up
@@ -38,7 +42,7 @@ const SignUp = () => {
                             {...register("name", { required: true })}
                         />
                         {errors.name && (
-                            <span className="text-sm font-bold text-red-500">
+                            <span className="text-xs font-bold text-red-500">
                                 Name is required
                             </span>
                         )}
@@ -59,12 +63,42 @@ const SignUp = () => {
                             })}
                         />
                         {errors.email && (
-                            <span className="text-sm font-bold text-red-600">
+                            <span className="text-xs font-bold text-red-600">
                                 Email is required and should be valid (no
                                 uppercase)
                             </span>
                         )}
                     </div>
+                    <div className="space-y-2">
+                        <label className="text-base font-semibold text-[#444444]">
+                            Phone no
+                        </label>
+                        <input
+                            type="number"
+                            name="number"
+                            className="border border-[#E8E8E8] rounded-md p-2 w-full text-base text-[#444444] hover:border-[#D3373C] focus:border-[#D3373C] duration-300"
+                            placeholder="phone no"
+                            {...register("number", {
+                                required: true,
+                                pattern: /^(?:\+88|88)?(01[3-9]\d{8})$/,
+                            })}
+                            step="1"
+                            min="0"
+                            style={{ appearance: "textfield" }} // Optional inline style
+                        />
+                        {errors.number?.type === "required" && (
+                            <span className="text-xs font-bold text-red-600">
+                                Phone number is required
+                            </span>
+                        )}
+                        {errors.number?.type === "pattern" && (
+                            <span className="text-xs font-bold text-red-600">
+                                Please enter a valid Bangladeshi phone number
+                                (starts with +880 or 01)
+                            </span>
+                        )}
+                    </div>
+
                     <div className="space-y-2">
                         <label className="text-base font-semibold text-[#444444]">
                             Password
@@ -83,22 +117,22 @@ const SignUp = () => {
                             placeholder="enter your password"
                         />
                         {errors.password?.type === "required" && (
-                            <span className="text-sm font-bold text-red-600">
+                            <span className="text-xs font-bold text-red-600">
                                 password is required
                             </span>
                         )}
                         {errors.password?.type === "minLength" && (
-                            <span className="text-sm font-bold text-red-600">
+                            <span className="text-xs font-bold text-red-600">
                                 Password must be 6 characters or longer
                             </span>
                         )}
                         {errors.password?.type === "maxLength" && (
-                            <span className="text-sm font-bold text-red-600">
+                            <span className="text-xs font-bold text-red-600">
                                 Password less then 20 characters
                             </span>
                         )}
                         {errors.password?.type === "pattern" && (
-                            <span className="text-sm font-bold text-red-600">
+                            <span className="text-xs font-bold text-red-600">
                                 Password must be one uppercase, one lowercase,
                                 one number and one special characters
                             </span>
