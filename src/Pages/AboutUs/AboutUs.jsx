@@ -9,7 +9,7 @@ const AboutUs = () => {
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080] rounded-xl flex justify-start items-center">
-                    <h2 className="text-5xl font-bold text-[#FFFFFF] ml-20">
+                    <h2 className="text-5xl font-bold text-[#FFFFFF] lg:ml-20 ml-10 animate__animated animate__bounce">
                         About Us
                     </h2>
                 </div>
@@ -21,7 +21,10 @@ const AboutUs = () => {
             <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 my-10">
                 {/* First Section with hover effect */}
                 <div className="group col-span-1">
-                    <div className="px-8 pt-8 pb-6 border-t-4 border-[#D3373C] rounded-xl space-y-3 shadow-md flex flex-col flex-grow bg-[#F3F3F3] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#D3373C] group-hover:to-[#000000] group-hover:border-[#444444]">
+                    <div
+                        className="px-8 pt-8 pb-6 border-t-4 border-[#D3373C] rounded-xl space-y-3 shadow-md flex flex-col flex-grow bg-[#F3F3F3] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#D3373C] group-hover:to-[#000000] group-hover:border-[#444444]"
+                        data-aos="fade-up"
+                    >
                         <h3 className="text-[#444444] text-xl font-bold transition-all duration-300 group-hover:text-white">
                             Company Overview
                         </h3>
@@ -52,7 +55,10 @@ const AboutUs = () => {
 
                 {/* Second Section with the same hover effect */}
                 <div className="group col-span-1">
-                    <div className="px-8 pt-8 pb-6 border-t-4 border-[#D3373C] rounded-xl shadow-md space-y-3 flex flex-col flex-grow bg-[#F3F3F3] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#D3373C] group-hover:to-[#000000] group-hover:border-[#444444]">
+                    <div
+                        className="px-8 pt-8 pb-6 border-t-4 border-[#D3373C] rounded-xl shadow-md space-y-3 flex flex-col flex-grow bg-[#F3F3F3] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#D3373C] group-hover:to-[#000000] group-hover:border-[#444444]"
+                        data-aos="fade-up"
+                    >
                         <h3 className="text-[#444444] text-xl font-bold transition-all duration-300 group-hover:text-white">
                             Our Products and Services
                         </h3>
@@ -86,7 +92,10 @@ const AboutUs = () => {
             </div>
 
             {/* 2nd grid */}
-            <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 my-10">
+            <div
+                className="grid lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 my-10 "
+                data-aos="fade-up"
+            >
                 {/* First Section with hover effect */}
                 <div className="group col-span-1">
                     <div className="px-8 pt-8 pb-6 border-t-4 border-[#D3373C] rounded-xl space-y-3 shadow-md flex flex-col flex-grow bg-[#F3F3F3] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#D3373C] group-hover:to-[#000000] group-hover:border-[#444444]">
@@ -154,7 +163,10 @@ const AboutUs = () => {
             </div>
 
             {/* 3rd grid */}
-            <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 my-10">
+            <div
+                className="grid lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 my-10"
+                data-aos="fade-up"
+            >
                 {/* First Section with hover effect */}
                 <div className="group col-span-1">
                     <div className="px-8 pt-8 pb-6 border-t-4 border-[#D3373C] rounded-xl space-y-3 shadow-md flex flex-col flex-grow bg-[#F3F3F3] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#D3373C] group-hover:to-[#000000] group-hover:border-[#444444]">
@@ -222,7 +234,10 @@ const AboutUs = () => {
             </div>
 
             {/* 4rd grid */}
-            <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 my-10">
+            <div
+                className="grid lg:grid-cols-2 grid-cols-1 justify-center items-stretch gap-8 my-10"
+                data-aos="fade-up"
+            >
                 {/* First Section with hover effect */}
                 <div className="group col-span-1">
                     <div className="px-8 pt-8 pb-6 border-t-4 border-[#D3373C] rounded-xl space-y-3 shadow-md flex flex-col flex-grow bg-[#F3F3F3] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#D3373C] group-hover:to-[#000000] group-hover:border-[#444444]">
