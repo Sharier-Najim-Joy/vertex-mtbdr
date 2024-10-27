@@ -3,6 +3,19 @@ import SectionTitle from "../Shared/SectionTitle";
 import { Link } from "react-router-dom";
 import useAllProducts from "../../hooks/useAllProducts";
 
+import category1 from "../../assets/images/CategoryLogo/SamwooBoiler.png";
+import category2 from "../../assets/images/CategoryLogo/Typical.jpg";
+import category3 from "../../assets/images/CategoryLogo/Jam.png";
+import category4 from "../../assets/images/CategoryLogo/BKS.png";
+import category5 from "../../assets/images/CategoryLogo/KansaiSpecial.png";
+import category6 from "../../assets/images/CategoryLogo//marine.png";
+import category7 from "../../assets/images/CategoryLogo/Eastman.png";
+import category8 from "../../assets/images/CategoryLogo/Yamato.png";
+import category9 from "../../assets/images/CategoryLogo/Inhyun.png";
+import category10 from "../../assets/images/CategoryLogo/Cutex.png";
+import category11 from "../../assets/images/CategoryLogo/Veit.png";
+import category12 from "../../assets/images/CategoryLogo/Focus.png";
+
 const CategoryProducts = () => {
     const [products, refetch, isItemLoading] = useAllProducts();
 
@@ -10,25 +23,40 @@ const CategoryProducts = () => {
     const categories = [
         {
             name: "Samwoo Boiler",
-            image: "/src/assets/CategoryLogo/SamwooBoiler.png",
+            image: `${category1}`,
         },
-        { name: "Typical", image: "/src/assets/CategoryLogo/Typical.jpg" },
+        {
+            name: "Typical",
+            image: `${category2}`,
+        },
         {
             name: "Jam International",
-            image: "/src/assets/CategoryLogo/Jam.png",
+            image: `${category3}`,
         },
-        { name: "BKS Bukangs", image: "/src/assets/CategoryLogo/BKS.png" },
+        {
+            name: "BKS Bukangs",
+            image: `${category4}`,
+        },
         {
             name: "Kansai Special",
-            image: "/src/assets/CategoryLogo/KansaiSpecial.png",
+            image: `${category5}`,
         },
-        { name: "Martin Group", image: "/src/assets/CategoryLogo/marine.png" },
-        { name: "Eastman", image: "/src/assets/CategoryLogo/Eastman.png" },
-        { name: "Yamato", image: "/src/assets/CategoryLogo/Yamato.png" },
-        { name: "Inhyun Kostar", image: "/src/assets/CategoryLogo/Inhyun.png" },
-        { name: "Cutex", image: "/src/assets/CategoryLogo/Cutex.png" },
-        { name: "Veit", image: "/src/assets/CategoryLogo/Veit.png" },
-        { name: "Focus", image: "/src/assets/CategoryLogo/Focus.png" },
+        {
+            name: "Martin Group",
+            image: `${category6}`,
+        },
+        {
+            name: "Eastman",
+            image: `${category7}`,
+        },
+        { name: "Yamato", image: `${category8}` },
+        {
+            name: "Inhyun Kostar",
+            image: `${category9}`,
+        },
+        { name: "Cutex", image: `${category10}` },
+        { name: "Veit", image: `${category11}` },
+        { name: "Focus", image: `${category12}` },
     ];
 
     // Check if products are still loading

@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { CgFacebook } from "react-icons/cg";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./signUp.css";
@@ -8,6 +7,7 @@ import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import useSweetAlert from "../../../hooks/useSweetAlert";
+import signInImg from "../../../assets/images/login&SignUp/Frame.png";
 
 const SignUp = () => {
     const [show, setShow] = useState(false);
@@ -91,10 +91,7 @@ const SignUp = () => {
     return (
         <div className="grid lg:grid-cols-5 md:grid-cols-2 justify-center items-center lg:px-10 px-0 h-screen gap-5 max-w-7xl mx-auto">
             <div className="lg:col-span-3 grid-cols-1 lg:flex justify-center items-center lg:px-20 md:px-6 md:flex hidden">
-                <img
-                    src="/src/assets/login&SignUp/Frame.png"
-                    alt="SignUp page Image"
-                />
+                <img src={signInImg} alt="SignUp page Image" />
             </div>
             <div className="lg:col-span-2 col-span-1 lg:p-16 p-6 shadow-lg shadow-[#D3373C33] rounded-xl grid grid-cols-1">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
@@ -249,9 +246,6 @@ const SignUp = () => {
                             className="bg-[#F5F5F8] p-3 rounded-full hover:bg-[#D3D3D3] transition-all"
                         >
                             <FcGoogle className="text-2xl" />
-                        </button>
-                        <button className="bg-[#F5F5F8] p-3 rounded-full hover:bg-[#D3D3D3] transition-all">
-                            <CgFacebook className="text-2xl text-[#3B5998]" />
                         </button>
                     </div>
                 </div>

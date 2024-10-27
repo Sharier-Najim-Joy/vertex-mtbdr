@@ -6,7 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import useAdmin from "../../hooks/useAdmin";
 import { MdDashboardCustomize, MdLogin } from "react-icons/md";
 import useUserInfo from "../../hooks/useUserInfo";
-
+import logo from "../../assets/images/logo/vertexLogo.png";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { user, logOut } = useAuth();
@@ -250,11 +250,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <Link to={"/"}>
-                            <img
-                                src="/src/assets/logo/vertexLogo.png"
-                                alt="Vertex Logo"
-                                className="lg:w-28 w-24"
-                            />
+                            <img src={logo} alt="" className="w-24" />
                         </Link>
                     </div>
                     {/* NavCenter */}
@@ -285,12 +281,15 @@ const Navbar = () => {
                                 </label>
                                 <ul
                                     tabIndex={0}
-                                    className="flex flex-col gap-2 menu-sm dropdown-content mt-3 z-[1] shadow bg-[#D3373C] rounded-lg p-4 w-52"
+                                    className="flex flex-col gap-2 menu-sm dropdown-content mt-3 z-[1] shadow bg-[#D3373C] rounded-lg p-4"
                                 >
-                                    <li>
+                                    <li className="text-center">
                                         <p className="text-sm font-extrabold tracking-wider text-center text-white">
                                             {user.displayName || "Not a Name"}
                                         </p>
+                                        <small className="px-2 py-0.5 rounded-xl bg-red-700 text-center text-white">
+                                            {user.email}
+                                        </small>
                                     </li>
                                     <li>
                                         <Link

@@ -10,6 +10,7 @@ import { MdMapsHomeWork } from "react-icons/md";
 
 import useAdmin from "../hooks/useAdmin";
 import { IoBagAddSharp } from "react-icons/io5";
+import logo from "../assets/images/logo/vertexLogo.png";
 
 const Dashboard = () => {
     const [isActive, setActive] = useState(false);
@@ -120,7 +121,7 @@ const Dashboard = () => {
                         className="text-2xl tracking-widest font-semibold uppercase flex justify-center items-center text-white gap-1 mb-7"
                     >
                         <img
-                            src="/src/assets/logo/vertexLogo.png"
+                            src={logo}
                             alt="Vertex Logo"
                             className="lg:w-28 w-24 bg-white rounded-lg p-2"
                         />

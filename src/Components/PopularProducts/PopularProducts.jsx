@@ -2,7 +2,7 @@ import { IoArrowForward } from "react-icons/io5";
 import SectionTitle from "../Shared/SectionTitle";
 import { Link } from "react-router-dom";
 import useAllProducts from "../../hooks/useAllProducts";
-import loadingGif from "../../assets/loading/loading.gif";
+import loadingGif from "../../assets/images/loading/loading.gif";
 const PopularProducts = () => {
     const [products, isItemLoading] = useAllProducts();
 

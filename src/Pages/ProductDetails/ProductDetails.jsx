@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useEffect, useState } from "react";
 import { FaYoutube } from "react-icons/fa";
-import loadingGif from "../../assets/loading/loading.gif";
+import loadingGif from "../../assets/images/loading/loading.gif";
 const ProductDetails = () => {
     const axiosPublic = useAxiosPublic();
     const { id } = useParams();

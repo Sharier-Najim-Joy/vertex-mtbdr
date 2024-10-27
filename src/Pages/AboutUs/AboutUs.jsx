@@ -1,3 +1,5 @@
+import aboutImg from "../../assets/images/AboutImg/AboutBannerImg.png";
+
 const AboutUs = () => {
     return (
         <div className="my-6">
@@ -5,7 +7,7 @@ const AboutUs = () => {
             <div
                 className="relative bg-cover bg-center w-full h-[30vh] rounded-xl"
                 style={{
-                    backgroundImage: `url('/src/assets/AboutImg/AboutBannerImg.png')`,
+                    backgroundImage: `url(${aboutImg})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080] rounded-xl flex justify-start items-center">

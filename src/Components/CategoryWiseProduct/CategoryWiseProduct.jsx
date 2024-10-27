@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import useAllProducts from "../../hooks/useAllProducts";
 import { IoArrowForward } from "react-icons/io5";
-import loadingGif from "../../assets/loading/loading.gif";
+import loadingGif from "../../assets/images/loading/loading.gif";
 const CategoryWiseProduct = () => {
     const { categoryName } = useParams(); // Get the category name from the URL
     const [products, refetch, isItemLoading] = useAllProducts(); // Fetch all products

@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { RiRestaurantFill } from "react-icons/ri";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
@@ -51,6 +50,7 @@ const AddProduct = () => {
                     popularCategory: data.popularCategory,
                     shortDescription: data.shortDescription,
                     description: data.description,
+                    video: data.video,
                 };
 
                 // Save product to the database
@@ -117,7 +117,7 @@ const AddProduct = () => {
                     </div>
 
                     {/* Category and Popular Category */}
-                    <div className="flex justify-center items-center gap-8 w-full">
+                    <div className="grid md:grid-cols-2 grid-cols-1 justify-center items-center lg:gap-8 gap-4 w-full">
                         <div className="flex flex-col w-full space-y-2">
                             <label className="text-base font-semibold text-[#444444]">
                                 Category*
@@ -195,26 +195,41 @@ const AddProduct = () => {
                         </div>
                     </div>
 
-                    {/* Short Description */}
-                    <div className="space-y-2">
-                        <label className="text-base font-semibold text-[#444444]">
-                            Short Description*
-                        </label>
-                        <input
-                            type="text"
-                            className={`border-2 border-gray-300 rounded-md p-2 w-full text-base ${
-                                errors.shortDescription && "border-red-500"
-                            }`}
-                            placeholder="Short description"
-                            {...register("shortDescription", {
-                                required: "Short description is required",
-                            })}
-                        />
-                        {errors.shortDescription && (
-                            <p className="text-red-500 text-sm">
-                                {errors.shortDescription.message}
-                            </p>
-                        )}
+                    {/* video & Short Description */}
+                    <div className="grid md:grid-cols-2 grid-cols-1 justify-center items-center lg:gap-8 gap-4 w-full">
+                        <div className="">
+                            <label className="text-base font-semibold text-[#444444]">
+                                Video Link*
+                            </label>
+                            <input
+                                type="text"
+                                className={`border-2 border-gray-300 rounded-md p-2 w-full text-base ${
+                                    errors.video && "border-red-500"
+                                }`}
+                                placeholder="provide Link"
+                                {...register("video")}
+                            />
+                        </div>
+                        <div className="">
+                            <label className="text-base font-semibold text-[#444444]">
+                                Short Description*
+                            </label>
+                            <input
+                                type="text"
+                                className={`border-2 border-gray-300 rounded-md p-2 w-full text-base ${
+                                    errors.shortDescription && "border-red-500"
+                                }`}
+                                placeholder="Short description"
+                                {...register("shortDescription", {
+                                    required: "Short description is required",
+                                })}
+                            />
+                            {errors.shortDescription && (
+                                <p className="text-red-500 text-sm">
+                                    {errors.shortDescription.message}
+                                </p>
+                            )}
+                        </div>
                     </div>
 
                     {/* Product Description */}

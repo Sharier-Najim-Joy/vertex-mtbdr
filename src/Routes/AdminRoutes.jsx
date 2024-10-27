@@ -1,6 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-import loadingGif from "../assets/loading/loading.gif";
+import loadingGif from "../assets/images/loading/loading.gif";
 import useAdmin from "../hooks/useAdmin";
 
 const AdminRoutes = ({ children }) => {

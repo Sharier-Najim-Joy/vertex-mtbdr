@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import AOS from "aos"; // Import AOS
 
+import banner1 from "../../assets/images/BannerPic/banner1.png";
+import banner2 from "../../assets/images/BannerPic/banner2.png";
+import banner3 from "../../assets/images/BannerPic/banner3.png";
+import banner4 from "../../assets/images/BannerPic/banner4.png";
+import banner5 from "../../assets/images/BannerPic/banner5.png";
+import banner6 from "../../assets/images/BannerPic/banner6.png";
+
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(1);
     const [isHovered, setIsHovered] = useState(false);
@@ -35,7 +42,7 @@ const Slider = () => {
                     currentSlide === 1 ? "block" : "hidden"
                 }`}
                 style={{
-                    backgroundImage: `url('/src/assets/BannerPic/banner1.png')`,
+                    backgroundImage: `url(${banner1})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080]">
@@ -84,7 +91,7 @@ const Slider = () => {
                     currentSlide === 2 ? "block" : "hidden"
                 }`}
                 style={{
-                    backgroundImage: `url('/src/assets/BannerPic/banner2.png')`,
+                    backgroundImage: `url(${banner2})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080]">
@@ -131,7 +138,7 @@ const Slider = () => {
                     currentSlide === 3 ? "block" : "hidden"
                 }`}
                 style={{
-                    backgroundImage: `url('/src/assets/BannerPic/banner3.png')`,
+                    backgroundImage: `url(${banner3})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080]">
@@ -179,7 +186,7 @@ const Slider = () => {
                     currentSlide === 4 ? "block" : "hidden"
                 }`}
                 style={{
-                    backgroundImage: `url('/src/assets/BannerPic/banner4.png')`,
+                    backgroundImage: `url(${banner4})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080]">
@@ -227,7 +234,7 @@ const Slider = () => {
                     currentSlide === 5 ? "block" : "hidden"
                 }`}
                 style={{
-                    backgroundImage: `url('/src/assets/BannerPic/banner6.png')`,
+                    backgroundImage: `url(${banner5})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080]">
@@ -275,7 +282,7 @@ const Slider = () => {
                     currentSlide === 6 ? "block" : "hidden"
                 }`}
                 style={{
-                    backgroundImage: `url('/src/assets/BannerPic/banner5.png')`,
+                    backgroundImage: `url(${banner6})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080]">

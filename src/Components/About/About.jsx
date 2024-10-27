@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
-
+import AboutImg from "../../assets/images/AboutImg/OwnerAboutImg.png";
 const About = () => {
     return (
         <div className="grid lg:grid-cols-2 grid-cols-1 justify-center items-center gap-8 my-20 lg:w-4/5 w-full mx-auto">
             <div className="col-span-1" data-aos="fade-up">
-                <img
-                    src="/src/assets/AboutImg/OwnerAboutImg.png"
-                    alt="About Image"
-                />
+                <img src={AboutImg} alt="About Image" />
             </div>
             <div
                 className="col-span-1 items-center space-y-4"

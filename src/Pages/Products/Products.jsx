@@ -2,7 +2,7 @@ import { IoArrowForward } from "react-icons/io5";
 import useAllProducts from "../../hooks/useAllProducts";
 import { Link } from "react-router-dom";
 import { useState } from "react"; // Import useState
-import loadingGif from "../../assets/loading/loading.gif";
+import aboutImg from "../../assets/images/AboutImg/AboutBannerImg.png";
 const Products = () => {
     const [products, isItemLoading] = useAllProducts();
     const [searchQuery, setSearchQuery] = useState(""); // State for search query
@@ -60,7 +60,7 @@ const Products = () => {
             <div
                 className="relative bg-cover bg-center w-full h-[30vh] rounded-xl"
                 style={{
-                    backgroundImage: `url('/src/assets/AboutImg/AboutBannerImg.png')`,
+                    backgroundImage: `url(${aboutImg})`,
                 }}
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-[#00000080] rounded-xl flex justify-start items-center">

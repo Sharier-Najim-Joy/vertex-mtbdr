@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import SectionTitle from "./Shared/SectionTitle";
 import { useEffect, useState } from "react";
 import useAxiosPublic from "../hooks/useAxiosPublic";
-import loadingGif from "../assets/loading/loading.gif";
+import loadingGif from "../assets/images/loading/loading.gif";
 import { useForm } from "react-hook-form";
 
 const UpdateProducts = () => {

@@ -3,16 +3,17 @@ import { CgFacebook } from "react-icons/cg";
 import { FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo/vertexLogo.png";
 
 const Footer = () => {
     return (
         <div className="bg-[#000000]">
             <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 lg:text-left text-center justify-center items-start max-w-7xl mx-auto gap-12 px-4 lg:py-28 md:py-10 py-10">
                 {/* Left */}
-                <div className="col-span-2 space-y-3 flex justify-start lg:items-start items-center flex-col">
+                <div className="lg:col-span-2 col-span-1 space-y-3 flex justify-start lg:items-start items-center flex-col">
                     <Link to={"/"}>
                         <img
-                            src="/src/assets/logo/vertexLogo.png"
+                            src={logo}
                             alt="Vertex Logo"
                             className="lg:w-28 w-28 p-1 bg-white rounded-lg"
                         />
@@ -27,7 +28,7 @@ const Footer = () => {
                             <a
                                 target="_blank"
                                 href="https://maps.app.goo.gl/z7oHnQwy36Za3Rgy7"
-                                className="text-sm text-[#E8E8E8]"
+                                className="text-sm text-[#E8E8E8] hover:underline hover:text-[#D3373C] transition duration-300"
                             >
                                 Dhaka Office: 19 Rd No 4/A, Uttara, Dhaka 1230,
                                 Bangladesh
@@ -40,7 +41,7 @@ const Footer = () => {
                             <a
                                 target="_blank"
                                 href="https://maps.app.goo.gl/z7oHnQwy36Za3Rgy7"
-                                className="text-sm text-[#E8E8E8]"
+                                className="text-sm text-[#E8E8E8] hover:underline hover:text-[#D3373C] transition duration-300"
                             >
                                 Chittagong Office: Jashim Mansion, 4th floor
                                 saltgola, Western Marine Side, Newmoring,

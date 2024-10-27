@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import errorImg from "../../assets/images/ErrorPage/Error.png";
 
 const ErrorPage = () => {
     return (
         <div className="h-screen w-full flex justify-center items-center">
             <div className="space-y-2 text-center flex justify-center items-center flex-col">
                 <img
-                    src="/src/assets/ErrorPage/Error.png"
+                    src={errorImg}
                     alt="Error"
                     className="max-w-xs md:max-w-md lg:max-w-lg h-auto"
                 />
